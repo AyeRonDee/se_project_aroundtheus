@@ -1,3 +1,12 @@
+@keyframes shrink {
+  from {
+    width: 150px;
+  }
+  to {
+    width: 50px;
+  }
+}
+
 .profile {
   display: flex;
   align-items: center;
@@ -17,10 +26,11 @@
   grid-template-areas:
     "title button"
     "description description";
-  grid-template-columns: minmax(auto, 373px) auto;
+  grid-template-columns: minmax(min-content, max-content) auto;
 }
 
 .profile__title {
+  font-family: "Inter-Med";
   font-size: 42px;
   line-height: 48px;
   font-weight: 500;
@@ -35,6 +45,12 @@
   border: none;
   grid-area: button;
   align-self: center;
+  margin-left: 18px;
+  transition: width 2s;
+}
+
+.profile__edit-button:hover {
+  opacity: 80%;
 }
 
 .profile__description {
@@ -42,18 +58,35 @@
   line-height: 22px;
   font-weight: 400;
   grid-area: description;
-  margin: 0;
+  margin: 7px 0 0;
 }
 
 .profile__add-button {
   background: transparent url(../images/plus_icon_white.svg) center no-repeat;
+  background-color: black;
   height: 50px;
   width: 150px;
   border: 2px solid white;
   margin-left: auto;
 }
 
-@media screen and (max-width: 480px) {
+.profile__add-button:hover {
+  opacity: 80%;
+}
+
+@media screen and (max-width: 770px) {
+  .profile__title {
+    font-size: 28px;
+  }
+
+  .profile__add-button {
+    animation-duration: 0.5s;
+    animation-name: shrink;
+    width: 50px;
+  }
+}
+
+@media screen and (max-width: 620px) {
   .profile {
     flex-direction: column;
   }
@@ -67,13 +100,24 @@
     width: 100%;
     margin-bottom: 36px;
   }
-
-  .profile__title {
-    margin: 30px 10px 0 0;
+  .profile__description {
+    width: 100%;
+    text-align: center;
+    margin-top: 14px;
   }
+  .profile__add-button {
+    margin: 0 19px 0;
+    width: 282px;
+    padding: 0;
+  }
+}
 
-  .profile_edit-button {
-    align-self: baseline;
+@media screen and (max-width: 480px) {
+  .profile__title {
+    margin: 28px 0 0 0;
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 500;
   }
 
   .profile__description {
@@ -82,17 +126,12 @@
     margin-top: 14px;
   }
 
-  .profile__add-button {
-    margin: 0;
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 364px) {
-  .profile__title {
-    font-size: 22px;
-    line-height: 26px;
-    font-weight: 500;
+  .profile__edit-button {
+    height: 18px;
+    width: 18px;
+    margin: 0 0 0 10px;
+    border: 1px solid white;
+    align-self: baseline;
   }
 
   .profile__description {
@@ -101,7 +140,9 @@
     font-weight: 400;
   }
 
-  .profile_edit-button {
-    align-self: baseline;
+  .profile__add-button {
+    margin: 0 19px 0;
+    width: 100%;
+    padding: 0;
   }
 }

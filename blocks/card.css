@@ -33,6 +33,14 @@
   border-radius: 0 0 10px 10px;
 }
 
+.card__title {
+  font-family: "InterVariable";
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 29px;
+  margin: 0;
+}
+
 .card__like-button {
   background: url(../images/heart_icon.svg) center no-repeat;
   border: none;

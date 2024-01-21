@@ -18,5 +18,5 @@ You can view this project on my GitHub Page [here]:
 (https://ayerondee.github.io/se_project_aroundtheus/)
 
 **Project Briefing**
-You may also watch my project Briefing here [here]:
+You may also watch my project Briefing [here]:
 (https://drive.google.com/file/d/15qvU07Jq_fre3zHRTgMs6L65jvia1chv/view?usp=sharing)

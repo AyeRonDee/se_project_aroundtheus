@@ -37,7 +37,7 @@
 }
 
 .card__title {
-  font-family: "InterVariable";
+  font-family: "InterVariable", sans-serif;
   font-size: 24px;
   font-weight: 900;
   line-height: 29px;

@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "Inter-Reg";
+  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -7,7 +7,7 @@
 }
 
 @font-face {
-  font-family: "Inter-Med";
+  font-family: "Inter";
   font-style: normal;
   font-weight: 500;
   font-display: swap;
@@ -15,9 +15,9 @@
 }
 
 @font-face {
-  font-family: "InterVariable";
+  font-family: "Inter";
   font-style: normal;
-  font-weight: 100 900;
+  font-weight: 900;
   font-display: swap;
-  src: url("../vendor/fonts/InterVariable.woff2") format("woff2");
+  src: url("Inter-Black.woff2") format("woff2");
 }

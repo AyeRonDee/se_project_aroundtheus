@@ -1,4 +1,4 @@
-let initialCards = [];
+const initialCards = [];
 
 initialCards = [
   {

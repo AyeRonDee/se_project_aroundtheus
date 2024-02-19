@@ -41,7 +41,7 @@
         <p class="footer__content">&#169; 2022 Around The U.S.</p>
       </footer>
 
-      <div class="modal">
+      <div class="modal__edit">
         <div class="modal__container">
           <button class="modal__close"></button>
           <form class="modal__form">
@@ -58,6 +58,30 @@
               type="text"
               name="description"
               placeholder="Description"
+              required
+            />
+            <button type="submit" class="modal__button">Save</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="modal__add">
+        <div class="modal__container">
+          <button class="modal__close"></button>
+          <form class="modal__form">
+            <h2 class="modal__heading">New Place</h2>
+            <input
+              class="modal__input-text modal__input_type_title"
+              type="text"
+              name="title"
+              placeholder="Title"
+              required
+            />
+            <input
+              class="modal__input-text modal__input_type_url"
+              type="text"
+              name="url"
+              placeholder="Image URL"
               required
             />
             <button type="submit" class="modal__button">Save</button>

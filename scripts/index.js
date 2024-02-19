@@ -70,6 +70,5 @@ profileEditForm.addEventListener("submit", function (event) {
 });
 
 initialCards.forEach(function (cardData) {
-  const cardElement = getCardElement(cardData);
-  cardListElement.append(cardElement);
+  cardListElement.append(getCardElement(cardData));
 });

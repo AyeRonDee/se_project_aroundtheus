@@ -81,11 +81,19 @@
               class="modal__input-text modal__input_type_url"
               type="text"
               name="url"
-              placeholder="Image URL"
+              placeholder="Image Link"
               required
             />
             <button type="submit" class="modal__button">Save</button>
           </form>
+        </div>
+      </div>
+
+      <div class="modal modal__image">
+        <div class="modal__image_container">
+          <button class="modal__close"></button>
+          <img class="modal__image_element" src="" alt="Test Image" />
+          <p class="modal__image_title">Title</p>
         </div>
       </div>
     </div>
@@ -96,6 +104,7 @@
         <div class="card__description">
           <h2 class="card__title"></h2>
           <button type="button" class="card__like-button"></button>
+          <button type="button" class="card__trash-button"></button>
         </div>
       </li>
     </template>

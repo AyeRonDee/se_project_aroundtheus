@@ -91,6 +91,20 @@
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+.modal__image {
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__image_container {
+  position: relative;
+}
+
+.modal__image_element {
+  max-width: 75vw;
+  max-height: 75vw;
+}
+
 @media screen and (max-width: 580px) {
   .modal__container {
     min-width: 282px;

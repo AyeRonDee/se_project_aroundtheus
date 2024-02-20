@@ -49,7 +49,8 @@
   opacity: 60%;
 }
 
-.modal__form {
+.modal__profile-form,
+.modal__add-form {
   display: flex;
   flex-direction: column;
 }
@@ -79,7 +80,8 @@
   margin-bottom: 47px;
 }
 
-.modal__button {
+.modal__edit-submit-btn,
+.modal__add-submit-btn {
   background-color: #000;
   color: #fff;
   font-weight: 400;
@@ -92,7 +94,8 @@
   cursor: pointer;
 }
 
-.modal__button:hover {
+.modal__edit-submit-btn:hover,
+.modal__add-submit-btn:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -131,7 +134,8 @@
     margin-bottom: 45px;
   }
 
-  .modal__button {
+  .modal__edit-submit-btn,
+  .modal__add-submit-btn {
     font-size: 14px;
     line-height: 27px;
   }
@@ -146,7 +150,8 @@
     font-size: 18px;
   }
 
-  .modal__button {
+  .modal__edit-submit-btn,
+  .modal__add-submit-btn {
     padding: 14px 96px 15px;
   }
 

@@ -78,9 +78,6 @@ function getCardElement(data) {
     openModal(imageModal);
   });
 
-  //add click listener to card image
-  //openModal with previewImageModal
-
   cardTitleElement.textContent = data.name;
   cardImageElement.src = data.link;
   cardImageElement.alt = data.name;

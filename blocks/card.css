@@ -40,6 +40,10 @@
   cursor: pointer;
 }
 
+.card__like-button_active {
+  background: url(../images/heart_icon_active.svg) center no-repeat;
+}
+
 .card__like-button:hover {
   opacity: 50%;
 }

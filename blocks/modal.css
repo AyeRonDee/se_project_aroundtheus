@@ -72,7 +72,7 @@
 
 .modal__form-title,
 .modal__input_type_title {
-  margin: 54px 0 30px 0;
+  margin: 54px 0 5px 0;
 }
 
 .modal__form-description,
@@ -111,6 +111,23 @@
 .modal__image_element {
   max-width: 75vw;
   max-height: 75vw;
+}
+
+.popup__input_type_error {
+  color: red;
+}
+
+.popup__error_visible {
+  color: #ff0000;
+  font-size: 12px;
+  font-weight: 400px;
+  line-height: 14.52px;
+  margin-bottom: 13px;
+  width: 356px;
+}
+
+.popup__button_disabled {
+  background-color: green;
 }
 
 @media screen and (max-width: 580px) {

@@ -44,23 +44,33 @@
       <div class="modal modal-edit">
         <div class="modal__container">
           <button class="modal__close"></button>
-          <form class="modal__profile-form">
+          <form class="popup__form modal__profile-form">
             <h2 class="modal__heading">Edit Profile</h2>
             <input
-              class="modal__input-text modal__form-title"
+              class="popup__input modal__input-text modal__form-title"
+              id="owner-name"
               type="text"
               name="title"
               placeholder="Name"
+              minlength="2"
+              maxlength="40"
               required
             />
+            <span id="owner-name-error" class="popup__error"></span>
             <input
-              class="modal__input-text modal__form-description"
+              class="popup__input modal__input-text modal__form-description"
+              id="owner-description"
               type="text"
               name="description"
               placeholder="Description"
+              minlength="2"
+              maxlength="200"
               required
             />
-            <button type="submit" class="modal__edit-submit-btn">Save</button>
+            <span id="owner-description-error" class="popup__error"></span>
+            <button type="submit" class="modal__edit-submit-btn popup__button">
+              Save
+            </button>
           </form>
         </div>
       </div>
@@ -68,23 +78,29 @@
       <div class="modal modal-add">
         <div class="modal__container">
           <button class="modal__close"></button>
-          <form class="modal__add-form">
+          <form class="popup__form modal__add-form">
             <h2 class="modal__heading">New Place</h2>
             <input
-              class="modal__input-text modal__input_type_title"
+              class="popup__input modal__input-text modal__input_type_title"
               type="text"
               name="title"
               placeholder="Title"
               required
             />
             <input
-              class="modal__input-text modal__input_type_url"
+              class="popup__input modal__input-text modal__input_type_url"
               type="text"
               name="url"
               placeholder="Image Link"
               required
             />
-            <button type="submit" class="modal__add-submit-btn">Save</button>
+            <button
+              type="submit"
+              class="modal__add-submit-btn popup__button popup__button_disabled"
+              disabled
+            >
+              Save
+            </button>
           </form>
         </div>
       </div>
@@ -110,5 +126,6 @@
     </template>
 
     <script src="./scripts/index.js" defer></script>
+    <script src="./scripts/validation.js" defer></script>
   </body>
 </html>

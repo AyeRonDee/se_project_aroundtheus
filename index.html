@@ -81,19 +81,25 @@
           <form class="popup__form modal__add-form">
             <h2 class="modal__heading">New Place</h2>
             <input
+              id="add-title"
               class="popup__input modal__input-text modal__input_type_title"
               type="text"
               name="title"
               placeholder="Title"
+              minlength="1"
+              maxlength="30"
               required
             />
+            <span id="add-title-error" class="popup__error"></span>
             <input
+              id="add-url"
               class="popup__input modal__input-text modal__input_type_url"
-              type="text"
+              type="url"
               name="url"
               placeholder="Image Link"
               required
             />
+            <span id="add-url-error" class="popup__error"></span>
             <button
               type="submit"
               class="modal__add-submit-btn popup__button popup__button_disabled"

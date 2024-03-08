@@ -72,12 +72,7 @@
 
 .modal__form-title,
 .modal__input_type_title {
-  margin: 54px 0 5px 0;
-}
-
-.modal__form-description,
-.modal__input_type_url {
-  margin-bottom: 47px;
+  margin-top: 54px;
 }
 
 .modal__edit-submit-btn,
@@ -92,11 +87,13 @@
   border: none;
   border-radius: 2px;
   cursor: pointer;
+  margin-top: 18px;
 }
 
 .modal__edit-submit-btn:hover,
 .modal__add-submit-btn:hover {
   background-color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
 }
 
 .modal-image {
@@ -114,7 +111,12 @@
 }
 
 .popup__input_type_error {
-  color: red;
+  color: #c4c4c4;
+}
+
+.popup__error {
+  height: 30px;
+  width: 356px;
 }
 
 .popup__error_visible {
@@ -122,12 +124,14 @@
   font-size: 12px;
   font-weight: 400px;
   line-height: 14.52px;
-  margin-bottom: 13px;
-  width: 356px;
+  padding: 5px 0 13px 0;
+  box-sizing: border-box;
 }
 
 .popup__button_disabled {
-  background-color: green;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.2);
 }
 
 @media screen and (max-width: 580px) {
@@ -148,7 +152,7 @@
   }
 
   .modal__form-description .modal__input_type_url {
-    margin-bottom: 45px;
+    margin-bottom: 18px;
   }
 
   .modal__edit-submit-btn,

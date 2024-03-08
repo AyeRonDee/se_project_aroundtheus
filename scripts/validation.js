@@ -68,4 +68,12 @@ const config = {
   errorClass: "popup__error_visible",
 };
 
+const closingModal = () => {
+  modal = document.querySelectorAll(".modal");
+  console.log(modal);
+  modal.addEventListener("click", () => {
+    console.log(modal);
+  });
+};
+
 enableValidation(config);

@@ -116,7 +116,7 @@
 
 .popup__error {
   height: 30px;
-  width: 356px;
+  width: 100%;
 }
 
 .popup__error_visible {
@@ -184,5 +184,9 @@
   .modal__form-description,
   .modal__input_type_url {
     margin-bottom: 46px;
+  }
+
+  .popup__error {
+    width: 100%;
   }
 }

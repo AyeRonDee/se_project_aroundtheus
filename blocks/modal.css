@@ -116,7 +116,7 @@
 
 .popup__error {
   height: 30px;
-  width: 100%;
+  max-width: 356px;
 }
 
 .popup__error_visible {

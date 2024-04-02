@@ -1,3 +1,6 @@
+import Card from "../components/card.js";
+import FormValidator from "../components/formValidator.js";
+
 const initialCards = [
   {
     name: "Yosemite Valley",
@@ -25,6 +28,14 @@ const initialCards = [
   },
 ];
 
+const cardData = {
+  name: "Yosemite Valley",
+  link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/yosemite.jpg",
+};
+
+const card = new Card(cardData, ".card__template");
+card.getView();
+
 const profileEditBtn = document.querySelector(".profile__edit-button");
 const profileEditModal = document.querySelector(".modal-edit");
 const profileEditModalCloseBtn =
@@ -50,6 +61,31 @@ const cardTitleInput = addNewCardModal.querySelector(
 const cardUrlInput = addNewCardModal.querySelector(".modal__input_type_url");
 const imageModal = document.querySelector(".modal-image");
 const imageModalCloseBtn = imageModal.querySelector(".modal__close");
+
+// *************
+// ******** VALIDATION *************
+// *************
+
+const validationSettings = {
+  inputSelector: ".modal__input",
+  submitButtonSelector: ".modal__button",
+  inactiveButtonClass: "modal__button_disabled",
+  inputErrorClass: "modal__input_type_error",
+  errorClass: "modal__error_visible",
+};
+
+const editFormValidator = new FormValidator(
+  validationSettings,
+  profileEditForm
+);
+const addFormValidator = new FormValidator(validationSettings, addNewCardForm);
+
+editFormValidator.enableValidation();
+addFormValidator.enableValidation();
+
+// *************
+// ******** VALIDATION *************
+// *************
 
 function escapeHandler(evt) {
   if (evt.key === "Escape") {
@@ -85,18 +121,18 @@ function getCardElement(data) {
   const cardElement = cardTemplate.cloneNode(true);
   const cardImageElement = cardElement.querySelector(".card__image");
   const cardTitleElement = cardElement.querySelector(".card__title");
-  const likeBtn = cardElement.querySelector(".card__like-button");
-  const cardDeleteBtn = cardElement.querySelector(".card__trash-button");
   const imageElement = imageModal.querySelector(".modal__image_element");
   const imageCaption = imageModal.querySelector(".modal__image_title");
+  // const likeBtn = cardElement.querySelector(".card__like-button");
+  // const cardDeleteBtn = cardElement.querySelector(".card__trash-button");
 
-  likeBtn.addEventListener("click", function () {
-    likeBtn.classList.toggle("card__like-button_active");
-  });
+  // likeBtn.addEventListener("click", function () {
+  //   likeBtn.classList.toggle("card__like-button_active");
+  // });
 
-  cardDeleteBtn.addEventListener("click", function () {
-    cardElement.remove();
-  });
+  // cardDeleteBtn.addEventListener("click", function () {
+  //   cardElement.remove();
+  // });
 
   cardImageElement.addEventListener("click", function () {
     imageElement.src = data.link;

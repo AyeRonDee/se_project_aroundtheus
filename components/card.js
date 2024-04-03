@@ -1,7 +1,7 @@
 export default class Card {
   constructor(data, cardSelector, handleImageClick) {
-    this._name = data.name;
-    this._link = data.link;
+    this.name = data.name;
+    this.link = data.link;
     this._cardSelector = cardSelector;
     this._handlePreviewPicture = handleImageClick;
   }
@@ -36,9 +36,9 @@ export default class Card {
       .cloneNode(true);
     this._setEventListeners();
 
-    this._cardElement.querySelector(".card__image").src = this._link;
-    this._cardElement.querySelector(".card__image").alt = this._name;
-    this._cardElement.querySelector(".card__title").textContent = this._name;
+    this._cardElement.querySelector(".card__image").src = this.link;
+    this._cardElement.querySelector(".card__image").alt = this.name;
+    this._cardElement.querySelector(".card__title").textContent = this.name;
 
     return this._cardElement;
   }

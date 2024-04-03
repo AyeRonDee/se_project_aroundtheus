@@ -104,9 +104,9 @@ function closeAllModals() {
 }
 
 function handleImageClick(card) {
-  imageElement.src = card._link;
-  imageElement.alt = card._name;
-  imageCaption.textContent = card._name;
+  imageElement.src = card.link;
+  imageElement.alt = card.name;
+  imageCaption.textContent = card.name;
   openModal(imageModal);
 }
 

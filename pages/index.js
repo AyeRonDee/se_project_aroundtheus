@@ -1,5 +1,5 @@
-import Card from "../components/card.js";
-import FormValidator from "../components/formValidator.js";
+import Card from "../components/Card.js";
+import FormValidator from "../components/FormValidator.js";
 
 const initialCards = [
   {
@@ -110,6 +110,11 @@ function handleImageClick(card) {
   openModal(imageModal);
 }
 
+function createCard(cardData) {
+  const newCard = new Card(cardData, ".card__template", handleImageClick);
+  return newCard.getView();
+}
+
 profileEditBtn.addEventListener("click", function () {
   modalTitleInput.value = profileTitle.textContent;
   modalDescriptionInput.value = profileDescription.textContent;
@@ -139,12 +144,8 @@ addNewCardForm.addEventListener("submit", function (event) {
   event.preventDefault();
   const name = cardTitleInput.value;
   const link = cardUrlInput.value;
-  const cardElement = new Card(
-    { name, link },
-    ".card__template",
-    handleImageClick
-  );
-  cardListElement.prepend(cardElement.getView());
+  const cardElement = createCard({ name, link });
+  cardListElement.prepend(cardElement);
   cardTitleInput.value = "";
   cardUrlInput.value = "";
   closeModal(addNewCardModal);
@@ -155,6 +156,6 @@ imageModalCloseBtn.addEventListener("click", function () {
 });
 
 initialCards.forEach(function (cardData) {
-  const card = new Card(cardData, ".card__template", handleImageClick);
-  cardListElement.append(card.getView());
+  const card = createCard(cardData);
+  cardListElement.append(card);
 });

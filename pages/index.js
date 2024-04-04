@@ -46,6 +46,9 @@ const cardTemplate =
 const addNewCardModal = document.querySelector(".modal-add");
 const addNewCardBtn = document.querySelector(".profile__add-button");
 const addNewCardCloseBtn = addNewCardModal.querySelector(".modal__close");
+const addNewCardSubmitBtn = addNewCardModal.querySelector(
+  ".modal__add-submit-btn"
+);
 const addNewCardForm = addNewCardModal.querySelector(".modal__add-form");
 const cardTitleInput = addNewCardModal.querySelector(
   ".modal__input_type_title"
@@ -133,6 +136,7 @@ profileEditForm.addEventListener("submit", function (event) {
 });
 
 addNewCardBtn.addEventListener("click", function () {
+  console.log(addNewCardSubmitBtn.disabled);
   openModal(addNewCardModal);
 });
 
@@ -148,6 +152,8 @@ addNewCardForm.addEventListener("submit", function (event) {
   cardListElement.prepend(cardElement);
   cardTitleInput.value = "";
   cardUrlInput.value = "";
+  addNewCardSubmitBtn.disabled = true;
+  addNewCardSubmitBtn.classList.add("modal__button_disabled");
   closeModal(addNewCardModal);
 });
 

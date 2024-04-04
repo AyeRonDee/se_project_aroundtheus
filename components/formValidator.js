@@ -36,6 +36,7 @@ export default class FormValidator {
 
   _toggleButtonState(inputEls) {
     let foundInvalid = false;
+
     inputEls.forEach((inputEl) => {
       if (!inputEl.validity.valid) {
         foundInvalid = true;

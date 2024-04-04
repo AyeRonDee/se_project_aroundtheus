@@ -136,7 +136,6 @@ profileEditForm.addEventListener("submit", function (event) {
 });
 
 addNewCardBtn.addEventListener("click", function () {
-  console.log(addNewCardSubmitBtn.disabled);
   openModal(addNewCardModal);
 });
 
@@ -150,10 +149,7 @@ addNewCardForm.addEventListener("submit", function (event) {
   const link = cardUrlInput.value;
   const cardElement = createCard({ name, link });
   cardListElement.prepend(cardElement);
-  cardTitleInput.value = "";
-  cardUrlInput.value = "";
-  addNewCardSubmitBtn.disabled = true;
-  addNewCardSubmitBtn.classList.add("modal__button_disabled");
+  addFormValidator.resetForm(addNewCardForm);
   closeModal(addNewCardModal);
 });
 

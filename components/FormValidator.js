@@ -8,6 +8,12 @@ export default class FormValidator {
     this._errorClass = settings.errorClass;
   }
 
+  resetForm(form) {
+    form.reset();
+    this._submitButton.classList.add(this._inactiveButtonClass);
+    this._submitButton.disabled = true;
+  }
+
   _showInputError(inputEl) {
     const errorElement = this._formElement.querySelector(
       `#${inputEl.id}-error`

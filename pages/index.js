@@ -149,7 +149,7 @@ addNewCardForm.addEventListener("submit", function (event) {
   const link = cardUrlInput.value;
   const cardElement = createCard({ name, link });
   cardListElement.prepend(cardElement);
-  addFormValidator.resetForm(addNewCardForm);
+  addFormValidator.resetForm();
   closeModal(addNewCardModal);
 });
 

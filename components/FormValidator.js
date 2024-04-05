@@ -8,10 +8,14 @@ export default class FormValidator {
     this._errorClass = settings.errorClass;
   }
 
-  resetForm(form) {
-    form.reset();
+  _deactivateButton() {
     this._submitButton.classList.add(this._inactiveButtonClass);
     this._submitButton.disabled = true;
+  }
+
+  _activateButton() {
+    this._submitButton.classList.remove(this._inactiveButtonClass);
+    this._submitButton.disabled = false;
   }
 
   _showInputError(inputEl) {
@@ -48,11 +52,9 @@ export default class FormValidator {
         foundInvalid = true;
       }
       if (foundInvalid) {
-        this._submitButton.classList.add(this._inactiveButtonClass);
-        this._submitButton.disabled = true;
+        this._deactivateButton();
       } else {
-        this._submitButton.classList.remove(this._inactiveButtonClass);
-        this._submitButton.disabled = false;
+        this._activateButton();
       }
     });
   }
@@ -70,6 +72,11 @@ export default class FormValidator {
         this._toggleButtonState(this._inputElements);
       });
     });
+  }
+
+  resetForm() {
+    this._formElement.reset();
+    this._deactivateButton();
   }
 
   enableValidation() {
